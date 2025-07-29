@@ -213,13 +213,13 @@ const Reviews = () => {
                   const element = document.getElementById("contact-form");
                   element?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="inline-flex items-center justify-center px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-lg hover:bg-white/90 transition-colors shadow-lg"
               >
                 Получить консультацию бесплатно
               </button>
               <a 
                 href="tel:+78442555000"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition-colors"
               >
                 Позвонить: +7 (8442) 555-000
               </a>

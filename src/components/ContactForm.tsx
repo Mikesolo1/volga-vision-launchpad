@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
+import { sendToTelegram } from "@/lib/telegram";
 import { 
   Phone, 
   Mail, 
@@ -51,24 +52,33 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Симуляция отправки в Telegram бота
-      // В реальном проекте здесь должна быть отправка через API
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Заявка отправлена!",
-        description: "Мы свяжемся с вами в течение 15 минут",
+      // Отправляем данные в Telegram
+      const success = await sendToTelegram({
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        objectType: formData.objectType,
+        message: formData.message
       });
 
-      // Очистка формы
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        objectType: "",
-        message: "",
-        agreement: false
-      });
+      if (success) {
+        toast({
+          title: "Заявка отправлена!",
+          description: "Мы свяжемся с вами в течение 15 минут",
+        });
+
+        // Очистка формы
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          objectType: "",
+          message: "",
+          agreement: false
+        });
+      } else {
+        throw new Error('Ошибка отправки');
+      }
     } catch (error) {
       toast({
         title: "Ошибка отправки",

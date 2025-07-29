@@ -145,7 +145,6 @@ const Advantages = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="max-w-2xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
@@ -157,7 +156,7 @@ const Advantages = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+78442555000"
-                className="inline-flex items-center justify-center px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-accent text-accent-foreground font-bold rounded-lg hover:bg-accent/90 transition-colors shadow-lg"
               >
                 Позвонить сейчас: +7 (8442) 555-000
               </a>
@@ -166,7 +165,7 @@ const Advantages = () => {
                   const element = document.getElementById("contact-form");
                   element?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-bold rounded-lg hover:bg-primary/90 transition-colors shadow-lg"
               >
                 Оставить заявку онлайн
               </button>

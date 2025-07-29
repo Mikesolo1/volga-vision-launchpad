@@ -69,7 +69,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="xl"
-                className="flex-1 sm:flex-initial border-white text-white hover:bg-white hover:text-primary"
+                className="flex-1 sm:flex-initial border-2 border-white text-white hover:bg-white hover:text-primary transition-all duration-300"
                 onClick={() => {
                   const element = document.getElementById("services");
                   element?.scrollIntoView({ behavior: "smooth" });
