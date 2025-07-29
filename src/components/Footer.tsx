@@ -1,4 +1,5 @@
 import { Shield, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -144,12 +145,12 @@ const Footer = () => {
               © {currentYear} ВидеоНаблюдение34. Все права защищены.
             </div>
             <div className="flex space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">
+              <Link to="/privacy-policy" className="hover:text-white transition-colors">
                 Политика конфиденциальности
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+              </Link>
+              <Link to="/user-agreement" className="hover:text-white transition-colors">
                 Пользовательское соглашение
-              </a>
+              </Link>
             </div>
           </div>
 
