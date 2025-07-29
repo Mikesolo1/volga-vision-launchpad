@@ -1,4 +1,5 @@
-import { Shield, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import Logo from "./Logo";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -30,9 +31,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <Shield className="h-8 w-8 text-accent" />
-              <span className="text-xl font-bold">ВидеоНаблюдение34</span>
+            <div className="mb-4">
+              <Logo />
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Профессиональная установка систем видеонаблюдения в Волгограде и области. 
@@ -142,7 +142,7 @@ const Footer = () => {
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-400">
-              © {currentYear} ВидеоНаблюдение34. Все права защищены.
+              © {currentYear} VisionGuard 34. Все права защищены.
             </div>
             <div className="flex space-x-6 text-sm text-gray-400">
               <Link to="/privacy-policy" className="hover:text-white transition-colors">
