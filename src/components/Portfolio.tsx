@@ -273,7 +273,7 @@ const Portfolio = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all duration-300"
+                className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary transition-all duration-300"
                 onClick={() => {
                   const element = document.getElementById("contact-form");
                   element?.scrollIntoView({ behavior: "smooth" });
@@ -285,7 +285,7 @@ const Portfolio = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all duration-300"
+                className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary transition-all duration-300"
                 asChild
               >
                 <a href="tel:+78442555000">
