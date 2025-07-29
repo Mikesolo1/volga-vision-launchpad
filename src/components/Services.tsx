@@ -167,7 +167,7 @@ const Services = () => {
             <Button 
               variant="outline" 
               size="xl"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all duration-300"
+              className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary transition-all duration-300"
               onClick={scrollToForm}
             >
               <HeadphonesIcon className="h-5 w-5" />

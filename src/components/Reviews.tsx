@@ -219,7 +219,7 @@ const Reviews = () => {
               </button>
               <a 
                 href="tel:+78442555000"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white bg-transparent text-white font-bold rounded-lg hover:bg-white hover:text-primary transition-colors"
               >
                 Позвонить: +7 (8442) 555-000
               </a>
