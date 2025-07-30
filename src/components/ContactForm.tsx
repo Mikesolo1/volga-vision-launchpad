@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -99,21 +100,21 @@ const ContactForm = () => {
 
   return (
     <section id="contact-form" className="py-8 sm:py-12 lg:py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
+      <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-start">
           {/* Form */}
-          <Card className="p-4 sm:p-6 md:p-8 shadow-elegant order-2 lg:order-1">
-            <div className="text-center mb-6 sm:mb-8">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 leading-tight">
+          <Card className="p-3 sm:p-4 md:p-6 lg:p-8 shadow-elegant order-2 lg:order-1 w-full">
+            <div className="text-center mb-4 sm:mb-6 lg:mb-8">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-2 sm:mb-3 lg:mb-4 leading-tight px-2">
                 Получите бесплатную консультацию
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground px-2">
                 Оставьте заявку и наш инженер свяжется с вами в течение 15 минут
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-              <div className="space-y-2">
+            <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 lg:space-y-6">
+              <div className="space-y-1 sm:space-y-2">
                 <Label htmlFor="name" className="text-sm sm:text-base">Ваше имя *</Label>
                 <Input
                   id="name"
@@ -123,11 +124,11 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="Введите ваше имя"
-                  className="text-sm sm:text-base"
+                  className="text-sm sm:text-base h-10 sm:h-11"
                 />
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-1 sm:space-y-2">
                 <Label htmlFor="phone" className="text-sm sm:text-base">Телефон *</Label>
                 <Input
                   id="phone"
@@ -137,11 +138,11 @@ const ContactForm = () => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder="+7 (___) ___-__-__"
-                  className="text-sm sm:text-base"
+                  className="text-sm sm:text-base h-10 sm:h-11"
                 />
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-1 sm:space-y-2">
                 <Label htmlFor="email" className="text-sm sm:text-base">Email</Label>
                 <Input
                   id="email"
@@ -150,18 +151,18 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="your@email.com"
-                  className="text-sm sm:text-base"
+                  className="text-sm sm:text-base h-10 sm:h-11"
                 />
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-1 sm:space-y-2">
                 <Label htmlFor="objectType" className="text-sm sm:text-base">Тип объекта</Label>
                 <select
                   id="objectType"
                   name="objectType"
                   value={formData.objectType}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 sm:py-3 border border-input rounded-md bg-background text-foreground text-sm sm:text-base min-h-[40px] sm:min-h-[44px]"
+                  className="w-full px-3 py-2 sm:py-3 border border-input rounded-md bg-background text-foreground text-sm sm:text-base h-10 sm:h-11"
                 >
                   <option value="">Выберите тип объекта</option>
                   <option value="house">Частный дом</option>
@@ -173,7 +174,7 @@ const ContactForm = () => {
                 </select>
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-1 sm:space-y-2">
                 <Label htmlFor="message" className="text-sm sm:text-base">Дополнительная информация</Label>
                 <Textarea
                   id="message"
@@ -207,7 +208,7 @@ const ContactForm = () => {
                 type="submit" 
                 variant="hero" 
                 size="lg" 
-                className="w-full text-sm sm:text-base py-3 sm:py-4 min-h-[48px] sm:min-h-[52px]"
+                className="w-full text-sm sm:text-base py-3 sm:py-4 h-12 sm:h-14"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
@@ -221,7 +222,7 @@ const ContactForm = () => {
               </Button>
             </form>
 
-            <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-muted/50 rounded-lg">
+            <div className="mt-3 sm:mt-4 lg:mt-6 p-3 sm:p-4 bg-muted/50 rounded-lg">
               <div className="flex items-center space-x-2 text-muted-foreground text-xs sm:text-sm">
                 <Shield className="h-4 w-4 flex-shrink-0" />
                 <span>Ваши данные защищены и не передаются третьим лицам</span>
@@ -230,11 +231,11 @@ const ContactForm = () => {
           </Card>
 
           {/* Info and Benefits */}
-          <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-1 lg:order-2">
+          <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-1 lg:order-2 w-full">
             {/* Contact Info */}
-            <Card className="p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-6">Контактная информация</h3>
-              <div className="space-y-3 sm:space-y-4">
+            <Card className="p-3 sm:p-4 md:p-6">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-3 sm:mb-4 lg:mb-6">Контактная информация</h3>
+              <div className="space-y-2 sm:space-y-3 lg:space-y-4">
                 <div className="flex items-center space-x-3">
                   <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
                   <div>
@@ -267,9 +268,9 @@ const ContactForm = () => {
             </Card>
 
             {/* Benefits */}
-            <Card className="p-4 sm:p-6 bg-gradient-primary text-white">
-              <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Что вы получаете:</h3>
-              <div className="space-y-3 sm:space-y-4">
+            <Card className="p-3 sm:p-4 md:p-6 bg-gradient-primary text-white">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 sm:mb-4 lg:mb-6">Что вы получаете:</h3>
+              <div className="space-y-2 sm:space-y-3 lg:space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-accent flex-shrink-0" />
@@ -280,10 +281,10 @@ const ContactForm = () => {
             </Card>
 
             {/* Quick Call */}
-            <Card className="p-4 sm:p-6 text-center bg-accent/5 border-accent/30">
-              <h3 className="text-base sm:text-lg font-bold text-foreground mb-2">Нужна срочная консультация?</h3>
-              <p className="text-muted-foreground mb-3 sm:mb-4 text-sm sm:text-base">Позвоните прямо сейчас!</p>
-              <Button variant="cta" size="lg" className="w-full text-sm sm:text-base py-3 sm:py-4" asChild>
+            <Card className="p-3 sm:p-4 md:p-6 text-center bg-accent/5 border-accent/30">
+              <h3 className="text-sm sm:text-base md:text-lg font-bold text-foreground mb-2">Нужна срочная консультация?</h3>
+              <p className="text-muted-foreground mb-3 sm:mb-4 text-xs sm:text-sm md:text-base">Позвоните прямо сейчас!</p>
+              <Button variant="cta" size="lg" className="w-full text-sm sm:text-base py-3 sm:py-4 h-12 sm:h-14" asChild>
                 <a href="tel:+78442555000">
                   <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                   +7 (8442) 555-000
