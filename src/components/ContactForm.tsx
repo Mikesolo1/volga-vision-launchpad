@@ -98,23 +98,23 @@ const ContactForm = () => {
   ];
 
   return (
-    <section id="contact-form" className="py-20 bg-gradient-subtle">
+    <section id="contact-form" className="py-8 sm:py-12 lg:py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
           {/* Form */}
-          <Card className="p-6 md:p-8 shadow-elegant">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <Card className="p-4 sm:p-6 md:p-8 shadow-elegant order-2 lg:order-1">
+            <div className="text-center mb-6 sm:mb-8">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 leading-tight">
                 Получите бесплатную консультацию
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground">
                 Оставьте заявку и наш инженер свяжется с вами в течение 15 минут
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div className="space-y-2">
-                <Label htmlFor="name">Ваше имя *</Label>
+                <Label htmlFor="name" className="text-sm sm:text-base">Ваше имя *</Label>
                 <Input
                   id="name"
                   name="name"
@@ -123,11 +123,12 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="Введите ваше имя"
+                  className="text-sm sm:text-base"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="phone">Телефон *</Label>
+                <Label htmlFor="phone" className="text-sm sm:text-base">Телефон *</Label>
                 <Input
                   id="phone"
                   name="phone"
@@ -136,11 +137,12 @@ const ContactForm = () => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder="+7 (___) ___-__-__"
+                  className="text-sm sm:text-base"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email" className="text-sm sm:text-base">Email</Label>
                 <Input
                   id="email"
                   name="email"
@@ -148,17 +150,18 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="your@email.com"
+                  className="text-sm sm:text-base"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="objectType">Тип объекта</Label>
+                <Label htmlFor="objectType" className="text-sm sm:text-base">Тип объекта</Label>
                 <select
                   id="objectType"
                   name="objectType"
                   value={formData.objectType}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground"
+                  className="w-full px-3 py-2 sm:py-3 border border-input rounded-md bg-background text-foreground text-sm sm:text-base min-h-[40px] sm:min-h-[44px]"
                 >
                   <option value="">Выберите тип объекта</option>
                   <option value="house">Частный дом</option>
@@ -171,26 +174,28 @@ const ContactForm = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Дополнительная информация</Label>
+                <Label htmlFor="message" className="text-sm sm:text-base">Дополнительная информация</Label>
                 <Textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Расскажите о ваших потребностях, количестве камер, особенностях объекта..."
-                  rows={4}
+                  rows={3}
+                  className="text-sm sm:text-base resize-none"
                 />
               </div>
 
-              <div className="flex items-start space-x-2">
+              <div className="flex items-start space-x-2 sm:space-x-3">
                 <Checkbox
                   id="agreement"
                   checked={formData.agreement}
                   onCheckedChange={(checked) => 
                     setFormData(prev => ({ ...prev, agreement: checked as boolean }))
                   }
+                  className="mt-0.5 flex-shrink-0"
                 />
-                <Label htmlFor="agreement" className="text-sm text-muted-foreground leading-relaxed">
+                <Label htmlFor="agreement" className="text-xs sm:text-sm text-muted-foreground leading-relaxed cursor-pointer">
                   Согласен на обработку персональных данных в соответствии с 
                   <a href="#" className="text-primary hover:underline ml-1">
                     политикой конфиденциальности
@@ -201,86 +206,86 @@ const ContactForm = () => {
               <Button 
                 type="submit" 
                 variant="hero" 
-                size="xl" 
-                className="w-full"
+                size="lg" 
+                className="w-full text-sm sm:text-base py-3 sm:py-4 min-h-[48px] sm:min-h-[52px]"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
                   <>Отправляем...</>
                 ) : (
                   <>
-                    <Send className="h-5 w-5" />
-                    Получить консультацию бесплатно
+                    <Send className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                    Вызвать инженера бесплатно
                   </>
                 )}
               </Button>
             </form>
 
-            <div className="mt-6 p-4 bg-muted/50 rounded-lg">
-              <div className="flex items-center space-x-2 text-muted-foreground text-sm">
-                <Shield className="h-4 w-4" />
+            <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-muted/50 rounded-lg">
+              <div className="flex items-center space-x-2 text-muted-foreground text-xs sm:text-sm">
+                <Shield className="h-4 w-4 flex-shrink-0" />
                 <span>Ваши данные защищены и не передаются третьим лицам</span>
               </div>
             </div>
           </Card>
 
           {/* Info and Benefits */}
-          <div className="space-y-8">
+          <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-1 lg:order-2">
             {/* Contact Info */}
-            <Card className="p-6">
-              <h3 className="text-xl font-bold text-foreground mb-6">Контактная информация</h3>
-              <div className="space-y-4">
+            <Card className="p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-6">Контактная информация</h3>
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-primary" />
+                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
                   <div>
-                    <div className="font-semibold text-foreground">+7 (8442) 555-000</div>
-                    <div className="text-sm text-muted-foreground">Звонок бесплатный</div>
+                    <div className="font-semibold text-foreground text-sm sm:text-base">+7 (8442) 555-000</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground">Звонок бесплатный</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-primary" />
+                  <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
                   <div>
-                    <div className="font-semibold text-foreground">info@videonablydenie34.ru</div>
-                    <div className="text-sm text-muted-foreground">Ответим в течение часа</div>
+                    <div className="font-semibold text-foreground text-sm sm:text-base break-all">info@videonablydenie34.ru</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground">Ответим в течение часа</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="h-5 w-5 text-primary" />
+                  <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
                   <div>
-                    <div className="font-semibold text-foreground">г. Волгоград</div>
-                    <div className="text-sm text-muted-foreground">Работаем по всему городу и области</div>
+                    <div className="font-semibold text-foreground text-sm sm:text-base">г. Волгоград</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground">Работаем по всему городу и области</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Clock className="h-5 w-5 text-primary" />
+                  <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
                   <div>
-                    <div className="font-semibold text-foreground">Пн-Пт: 8:00-20:00</div>
-                    <div className="text-sm text-muted-foreground">Сб-Вс: 9:00-18:00</div>
+                    <div className="font-semibold text-foreground text-sm sm:text-base">Пн-Пт: 8:00-20:00</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground">Сб-Вс: 9:00-18:00</div>
                   </div>
                 </div>
               </div>
             </Card>
 
             {/* Benefits */}
-            <Card className="p-6 bg-gradient-primary text-white">
-              <h3 className="text-xl font-bold mb-6">Что вы получаете:</h3>
-              <div className="space-y-4">
+            <Card className="p-4 sm:p-6 bg-gradient-primary text-white">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Что вы получаете:</h3>
+              <div className="space-y-3 sm:space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                    <span>{benefit}</span>
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-accent flex-shrink-0" />
+                    <span className="text-sm sm:text-base">{benefit}</span>
                   </div>
                 ))}
               </div>
             </Card>
 
             {/* Quick Call */}
-            <Card className="p-6 text-center bg-accent/5 border-accent/30">
-              <h3 className="text-lg font-bold text-foreground mb-2">Нужна срочная консультация?</h3>
-              <p className="text-muted-foreground mb-4">Позвоните прямо сейчас!</p>
-              <Button variant="cta" size="lg" className="w-full" asChild>
+            <Card className="p-4 sm:p-6 text-center bg-accent/5 border-accent/30">
+              <h3 className="text-base sm:text-lg font-bold text-foreground mb-2">Нужна срочная консультация?</h3>
+              <p className="text-muted-foreground mb-3 sm:mb-4 text-sm sm:text-base">Позвоните прямо сейчас!</p>
+              <Button variant="cta" size="lg" className="w-full text-sm sm:text-base py-3 sm:py-4" asChild>
                 <a href="tel:+78442555000">
-                  <Phone className="h-5 w-5" />
+                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                   +7 (8442) 555-000
                 </a>
               </Button>
