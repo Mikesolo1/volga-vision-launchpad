@@ -37,21 +37,21 @@ const Hero = () => {
             </p>
 
             {/* Benefits */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               <div className="flex items-center space-x-3">
-                <Shield className="h-6 w-6 text-accent flex-shrink-0" />
+                <Shield className="h-5 w-5 md:h-6 md:w-6 text-accent flex-shrink-0" />
                 <span className="text-sm md:text-base">Гарантия 3 года</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Camera className="h-6 w-6 text-accent flex-shrink-0" />
+                <Camera className="h-5 w-5 md:h-6 md:w-6 text-accent flex-shrink-0" />
                 <span className="text-sm md:text-base">HD качество</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Users className="h-6 w-6 text-accent flex-shrink-0" />
+                <Users className="h-5 w-5 md:h-6 md:w-6 text-accent flex-shrink-0" />
                 <span className="text-sm md:text-base">500+ объектов</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Clock className="h-6 w-6 text-accent flex-shrink-0" />
+                <Clock className="h-5 w-5 md:h-6 md:w-6 text-accent flex-shrink-0" />
                 <span className="text-sm md:text-base">Монтаж за 1 день</span>
               </div>
             </div>
@@ -80,12 +80,12 @@ const Hero = () => {
             </div>
 
             {/* Special Offer */}
-            <div className="mt-8 p-4 bg-accent/10 border border-accent/30 rounded-lg backdrop-blur-sm">
+            <div className="mt-8 p-4 md:p-6 bg-accent/10 border border-accent/30 rounded-lg backdrop-blur-sm">
               <div className="flex items-center space-x-2 mb-2">
                 <div className="w-3 h-3 bg-accent rounded-full animate-pulse-glow"></div>
-                <span className="text-accent font-semibold">Акция до конца месяца!</span>
+                <span className="text-accent font-semibold text-sm md:text-base">Акция до конца месяца!</span>
               </div>
-              <p className="text-gray-200">
+              <p className="text-gray-200 text-sm md:text-base">
                 Установка от 4 камер - <span className="text-accent font-bold">скидка 20%</span> + 
                 бесплатная настройка мобильного приложения
               </p>

@@ -85,7 +85,7 @@ const Services = () => {
         </div>
 
         {/* Main Services */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
           {services.map((service, index) => (
             <Card 
               key={index}
@@ -140,7 +140,7 @@ const Services = () => {
         </div>
 
         {/* Additional Services */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {additionalServices.map((service, index) => (
             <Card 
               key={index}
@@ -156,8 +156,8 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-primary p-8 rounded-2xl text-white max-w-4xl mx-auto">
+        <div className="text-center mt-12 md:mt-16">
+          <div className="bg-gradient-primary p-6 md:p-8 rounded-2xl text-white max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Не знаете, какая система подойдет именно вам?
             </h3>

@@ -160,7 +160,7 @@ const Portfolio = () => {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12">
           {categories.map((category) => (
             <Button
               key={category.id}
@@ -175,7 +175,7 @@ const Portfolio = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {filteredProjects.map((project) => {
             const CategoryIcon = getCategoryIcon(project.category);
             
@@ -245,7 +245,7 @@ const Portfolio = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
           {[
             { number: "500+", label: "Реализованных проектов", sublabel: "за 7 лет работы" },
             { number: "2000+", label: "Установленных камер", sublabel: "по всему Волгограду" },
@@ -262,7 +262,7 @@ const Portfolio = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <div className="bg-gradient-primary p-8 rounded-2xl text-white max-w-4xl mx-auto">
+          <div className="bg-gradient-primary p-6 md:p-8 rounded-2xl text-white max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Хотите увидеть больше примеров наших работ?
             </h3>

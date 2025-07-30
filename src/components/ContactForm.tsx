@@ -100,9 +100,9 @@ const ContactForm = () => {
   return (
     <section id="contact-form" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Form */}
-          <Card className="p-8 shadow-elegant">
+          <Card className="p-6 md:p-8 shadow-elegant">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Получите бесплатную консультацию

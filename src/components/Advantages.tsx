@@ -79,9 +79,9 @@ const Advantages = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16 md:mb-20">
           {/* Advantages Grid */}
-          <div className="grid gap-6">
+          <div className="grid gap-4 md:gap-6">
             {advantages.map((advantage, index) => (
               <Card 
                 key={index}
@@ -111,9 +111,9 @@ const Advantages = () => {
               <div className="absolute inset-0 bg-gradient-primary opacity-10 rounded-2xl"></div>
             </div>
 
-            <div className="grid gap-4">
+            <div className="grid gap-3 md:gap-4">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-4 p-4 bg-muted/50 rounded-lg">
+                <div key={index} className="flex items-center space-x-3 md:space-x-4 p-3 md:p-4 bg-muted/50 rounded-lg">
                   <div className="p-2 bg-primary text-primary-foreground rounded-lg">
                     <feature.icon className="h-5 w-5" />
                   </div>
@@ -128,8 +128,8 @@ const Advantages = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="bg-gradient-primary p-8 md:p-12 rounded-2xl text-white">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+        <div className="bg-gradient-primary p-6 md:p-8 lg:p-12 rounded-2xl text-white">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
             {[
               { number: "500+", label: "Установленных объектов", sublabel: "в Волгограде и области" },
               { number: "7", label: "Лет успешной работы", sublabel: "на рынке безопасности" },
@@ -137,9 +137,9 @@ const Advantages = () => {
               { number: "3", label: "Года гарантии", sublabel: "на все работы" }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-accent mb-2">{stat.number}</div>
-                <div className="text-lg font-semibold mb-1">{stat.label}</div>
-                <div className="text-sm opacity-80">{stat.sublabel}</div>
+                <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-accent mb-2">{stat.number}</div>
+                <div className="text-sm md:text-lg font-semibold mb-1">{stat.label}</div>
+                <div className="text-xs md:text-sm opacity-80">{stat.sublabel}</div>
               </div>
             ))}
           </div>

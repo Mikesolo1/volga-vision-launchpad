@@ -102,7 +102,7 @@ const Reviews = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
           {stats.map((stat, index) => (
             <Card key={index} className="p-6 text-center hover:shadow-card transition-all duration-300">
               <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
@@ -113,7 +113,7 @@ const Reviews = () => {
         </div>
 
         {/* Reviews Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {reviews.map((review) => (
             <Card 
               key={review.id} 
@@ -171,7 +171,7 @@ const Reviews = () => {
         </div>
 
         {/* Video Reviews Section */}
-        <div className="bg-white rounded-2xl p-8 shadow-elegant mb-16">
+        <div className="bg-white rounded-2xl p-6 md:p-8 shadow-elegant mb-12 md:mb-16">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Видеоотзывы наших клиентов
@@ -181,7 +181,7 @@ const Reviews = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {[1, 2, 3].map((index) => (
               <Card key={index} className="relative overflow-hidden group cursor-pointer">
                 <div className="aspect-video bg-gradient-primary flex items-center justify-center">
@@ -200,7 +200,7 @@ const Reviews = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-primary p-8 rounded-2xl text-white max-w-4xl mx-auto">
+          <div className="bg-gradient-primary p-6 md:p-8 rounded-2xl text-white max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Присоединяйтесь к довольным клиентам!
             </h3>
