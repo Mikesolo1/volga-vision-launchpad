@@ -14,8 +14,8 @@ interface TelegramFormData {
 }
 
 // Токен бота - в реальном проекте должен храниться в переменных окружения
-// const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN';
-// const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID';
+ const TELEGRAM_BOT_TOKEN = '8303969862:AAHD1LOY9JmBwpLuEgWHqz9IDWAymYLXcP8';
+const TELEGRAM_CHAT_ID = '-2890807115';
 
 export const sendToTelegram = async (formData: TelegramFormData): Promise<boolean> => {
   // В данной демо-версии симулируем отправку
