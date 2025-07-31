@@ -36,19 +36,19 @@ ${formData.message ? `💬 Сообщение: ${formData.message}` : ''}
     `.trim();
 
     // В реальном проекте здесь должен быть вызов:
-    // const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     chat_id: TELEGRAM_CHAT_ID,
-    //     text: message,
-    //     parse_mode: 'HTML'
-    //   }),
-    // });
+    const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: {
+       'Content-Type': 'application/json',
+       },
+       body: JSON.stringify({
+         chat_id: TELEGRAM_CHAT_ID,
+        text: message,
+     parse_mode: 'HTML'
+      }),
+    });
     
-    // return response.ok;
+   return response.ok;
 
     // Демо-версия - симуляция успешной отправки
     console.log('Симуляция отправки в Telegram:', message);
