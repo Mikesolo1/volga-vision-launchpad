@@ -15,12 +15,12 @@ import {
   ChevronRight
 } from "lucide-react";
 import cameraImage from "@/assets/camera-product.jpg";
-import residentialSurveillance from "@/assets/residential-surveillance.jpg";
-import commercialSurveillance from "@/assets/commercial-surveillance.jpg";
-import warehouseSurveillance from "@/assets/warehouse-surveillance.jpg";
-import officeSurveillance from "@/assets/office-surveillance.jpg";
-import cottageSurveillance from "@/assets/cottage-surveillance.jpg";
-import retailSurveillance from "@/assets/retail-surveillance.jpg";
+import residentialSurveillance from "@/assets/residential-surveillance-real.jpg";
+import commercialSurveillance from "@/assets/commercial-surveillance-real.jpg";
+import warehouseSurveillance from "@/assets/warehouse-surveillance-real.jpg";
+import officeSurveillance from "@/assets/office-surveillance-real.jpg";
+import cottageSurveillance from "@/assets/cottage-surveillance-real.jpg";
+import retailSurveillance from "@/assets/retail-surveillance-real.jpg";
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("all");
