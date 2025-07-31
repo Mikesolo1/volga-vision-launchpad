@@ -60,7 +60,7 @@ const Header = () => {
           {/* Contact Button */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="text-right">
-              <div className="text-sm font-semibold text-primary">+7 (8442) 555-000</div>
+              <div className="text-sm font-semibold text-primary">+7 (929) 572-88-81</div>
               <div className="text-xs text-muted-foreground">Звонок бесплатный</div>
             </div>
             <Button 
@@ -121,7 +121,7 @@ const Header = () => {
                 Контакты
               </button>
               <div className="pt-4 border-t border-border/40">
-                <div className="text-lg font-semibold text-primary mb-2">+7 (8442) 555-000</div>
+                <div className="text-lg font-semibold text-primary mb-2">+7 (929) 572-88-81</div>
                 <Button 
                   variant="cta" 
                   size="default" 

@@ -15,6 +15,12 @@ import {
   ChevronRight
 } from "lucide-react";
 import cameraImage from "@/assets/camera-product.jpg";
+import residentialSurveillance from "@/assets/residential-surveillance.jpg";
+import commercialSurveillance from "@/assets/commercial-surveillance.jpg";
+import warehouseSurveillance from "@/assets/warehouse-surveillance.jpg";
+import officeSurveillance from "@/assets/office-surveillance.jpg";
+import cottageSurveillance from "@/assets/cottage-surveillance.jpg";
+import retailSurveillance from "@/assets/retail-surveillance.jpg";
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -25,7 +31,7 @@ const Portfolio = () => {
       title: "Частный дом в Центральном районе",
       category: "residential",
       description: "Установка системы из 8 IP-камер с ночным видением и мобильным приложением",
-      image: cameraImage,
+       image: residentialSurveillance,
       details: {
         cameras: 8,
         area: "200 м²",
@@ -40,7 +46,7 @@ const Portfolio = () => {
       title: "Торговый центр на ул. Ленина",
       category: "commercial",
       description: "Комплексная система видеонаблюдения для торгового центра площадью 1500 м²",
-      image: cameraImage,
+       image: commercialSurveillance,
       details: {
         cameras: 32,
         area: "1500 м²", 
@@ -55,7 +61,7 @@ const Portfolio = () => {
       title: "Складской комплекс в Красноармейском районе",
       category: "industrial",
       description: "Периметральная охрана складского комплекса с датчиками движения",
-      image: cameraImage,
+       image: warehouseSurveillance,
       details: {
         cameras: 16,
         area: "5000 м²",
@@ -70,7 +76,7 @@ const Portfolio = () => {
       title: "Офисное здание в Советском районе",
       category: "commercial",
       description: "Многоуровневая система безопасности для офисного центра",
-      image: cameraImage,
+       image: officeSurveillance,
       details: {
         cameras: 24,
         area: "800 м²",
@@ -85,7 +91,7 @@ const Portfolio = () => {
       title: "Коттеджный поселок в пригороде",
       category: "residential",
       description: "Система видеонаблюдения для охраны коттеджного поселка",
-      image: cameraImage,
+       image: cottageSurveillance,
       details: {
         cameras: 12,
         area: "территория поселка",
@@ -100,7 +106,7 @@ const Portfolio = () => {
       title: "Сеть магазинов продуктов",
       category: "retail",
       description: "Стандартизированная система для сети из 5 магазинов",
-      image: cameraImage,
+      image: retailSurveillance,
       details: {
         cameras: 40,
         area: "5 объектов",
@@ -288,8 +294,8 @@ const Portfolio = () => {
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary transition-all duration-300"
                 asChild
               >
-                <a href="tel:+78442555000">
-                  Позвонить: +7 (8442) 555-000
+                 <a href="tel:+79295728881">
+                   Позвонить: +7 (929) 572-88-81
                 </a>
               </Button>
             </div>

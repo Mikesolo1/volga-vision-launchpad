@@ -43,8 +43,8 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-accent" />
-                <a href="tel:+78442555000" className="hover:text-accent transition-colors">
-                  +7 (8442) 555-000
+                 <a href="tel:+79295728881" className="hover:text-accent transition-colors">
+                   +7 (929) 572-88-81
                 </a>
               </div>
               <div className="flex items-center space-x-2">
@@ -127,8 +127,8 @@ const Footer = () => {
             <div className="mt-6 p-4 bg-accent/10 border border-accent/20 rounded-lg">
               <h4 className="font-semibold text-accent mb-2">Срочный вызов!</h4>
               <p className="text-sm text-gray-300 mb-3">Аварийная служба 24/7</p>
-              <a 
-                href="tel:+78442555000"
+               <a 
+                 href="tel:+79295728881"
                 className="inline-flex items-center justify-center w-full px-4 py-2 bg-accent text-accent-foreground rounded-md hover:bg-accent/90 transition-colors font-semibold"
               >
                 <Phone className="h-4 w-4 mr-2" />

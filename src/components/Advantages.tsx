@@ -154,11 +154,11 @@ const Advantages = () => {
               Получите бесплатную консультацию и выезд инженера на объект
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+78442555000"
+               <a 
+                 href="tel:+79295728881"
                 className="inline-flex items-center justify-center px-8 py-4 bg-accent text-accent-foreground font-bold rounded-lg hover:bg-accent/90 transition-colors shadow-lg"
               >
-                Позвонить сейчас: +7 (8442) 555-000
+                Позвонить сейчас: +7 (929) 572-88-81
               </a>
               <button 
                 onClick={() => {

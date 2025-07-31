@@ -217,11 +217,11 @@ const Reviews = () => {
               >
                 Получить консультацию бесплатно
               </button>
-              <a 
-                href="tel:+78442555000"
+               <a 
+                 href="tel:+79295728881"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white bg-transparent text-white font-bold rounded-lg hover:bg-white hover:text-primary transition-colors"
               >
-                Позвонить: +7 (8442) 555-000
+                Позвонить: +7 (929) 572-88-81
               </a>
             </div>
           </div>

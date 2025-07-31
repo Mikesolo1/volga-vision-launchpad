@@ -239,7 +239,7 @@ const ContactForm = () => {
                 <div className="flex items-center space-x-3">
                   <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
                   <div>
-                    <div className="font-semibold text-foreground text-sm sm:text-base">+7 (8442) 555-000</div>
+                    <div className="font-semibold text-foreground text-sm sm:text-base">+7 (929) 572-88-81</div>
                     <div className="text-xs sm:text-sm text-muted-foreground">Звонок бесплатный</div>
                   </div>
                 </div>
@@ -285,9 +285,9 @@ const ContactForm = () => {
               <h3 className="text-sm sm:text-base md:text-lg font-bold text-foreground mb-2">Нужна срочная консультация?</h3>
               <p className="text-muted-foreground mb-3 sm:mb-4 text-xs sm:text-sm md:text-base">Позвоните прямо сейчас!</p>
               <Button variant="cta" size="lg" className="w-full text-sm sm:text-base py-3 sm:py-4 h-12 sm:h-14" asChild>
-                <a href="tel:+78442555000">
-                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-                  +7 (8442) 555-000
+                 <a href="tel:+79295728881">
+                   <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                   +7 (929) 572-88-81
                 </a>
               </Button>
             </Card>
