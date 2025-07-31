@@ -14,40 +14,49 @@ interface TelegramFormData {
 }
 
 // Токен бота - в реальном проекте должен храниться в переменных окружения
- const TELEGRAM_BOT_TOKEN = '8303969862:AAHD1LOY9JmBwpLuEgWHqz9IDWAymYLXcP8';
+const TELEGRAM_BOT_TOKEN = '8303969862:AAHD1LOY9JmBwpLuEgWHqz9IDWAymYLXcP8';
 const TELEGRAM_CHAT_ID = '-1002890807115';
 
 export const sendToTelegram = async (formData: TelegramFormData): Promise<boolean> => {
-  // В данной демо-версии симулируем отправку
-  // В реальном проекте здесь должен быть реальный API вызов
-  
   try {
-    // Формируем текст сообщения
+    const escapeHTML = (text: string) =>
+      text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
     const message = `
 🔔 НОВАЯ ЗАЯВКА НА ВИДЕОНАБЛЮДЕНИЕ
 
-👤 Имя: ${formData.name}
-📱 Телефон: ${formData.phone}
-${formData.email ? `📧 Email: ${formData.email}` : ''}
-${formData.objectType ? `🏢 Тип объекта: ${formData.objectType}` : ''}
-${formData.message ? `💬 Сообщение: ${formData.message}` : ''}
+👤 Имя: ${escapeHTML(formData.name)}
+📱 Телефон: ${escapeHTML(formData.phone)}
+${formData.email ? `📧 Email: ${escapeHTML(formData.email)}` : ''}
+${formData.objectType ? `🏢 Тип объекта: ${escapeHTML(formData.objectType)}` : ''}
+${formData.message ? `💬 Сообщение: ${escapeHTML(formData.message)}` : ''}
 
 🕐 Время: ${new Date().toLocaleString('ru-RU')}
     `.trim();
 
-    // В реальном проекте здесь должен быть вызов:
     const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
       method: 'POST',
-      headers: {
-       'Content-Type': 'application/json',
-       },
-       body: JSON.stringify({
-         chat_id: TELEGRAM_CHAT_ID,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: TELEGRAM_CHAT_ID,
         text: message,
-     parse_mode: 'HTML'
+        parse_mode: 'HTML',
       }),
     });
-    
-   return response.ok;
+
+    if (!response.ok) {
+      const error = await response.json();
+      console.error('Telegram API error:', error);
+      return false;
+    }
+
+    return true;
+
+  } catch (error) {
+    console.error('Ошибка при отправке сообщения в Telegram:', error);
+    return false;
+  }
+};
+
 
     
